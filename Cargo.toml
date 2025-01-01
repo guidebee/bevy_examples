@@ -4,7 +4,7 @@
       "examples/2d/viewport_to_world_2d",
       "examples/2d/bloom_2d",
       "hello_world"
-]
+, "examples/2d/bounding_2d"]
 
 [profile.release]
 opt-level = 3
