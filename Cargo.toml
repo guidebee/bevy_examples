@@ -1,5 +1,5 @@
 [workspace]
-   members = ["examples/2d/shapes_2d", "hello_world"
+   members = ["examples/2d/shapes_2d", "examples/2d/viewport_to_world_2d", "hello_world"
 ]
 
 [profile.release]
