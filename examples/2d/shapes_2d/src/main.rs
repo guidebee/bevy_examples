@@ -65,7 +65,7 @@ fn setup(
 
     #[cfg(not(target_arch = "wasm32"))]
     commands.spawn((
-        Text::new("Press space to toggle wireframes"),
+        Text::new("Press enter to toggle wireframes"),
         Node {
             position_type: PositionType::Absolute,
             top: Val::Px(12.0),
@@ -73,6 +73,9 @@ fn setup(
             ..default()
         },
     ));
+
+    // Set the background color to blue
+    commands.insert_resource(ClearColor(Color::srgb(0.1, 0.2, 0.3)));
 }
 
 #[cfg(not(target_arch = "wasm32"))]
@@ -80,7 +83,7 @@ fn toggle_wireframe(
     mut wireframe_config: ResMut<Wireframe2dConfig>,
     keyboard: Res<ButtonInput<KeyCode>>,
 ) {
-    if keyboard.just_pressed(KeyCode::Space) {
+    if keyboard.just_pressed(KeyCode::Enter) {
         wireframe_config.global = !wireframe_config.global;
     }
 }
