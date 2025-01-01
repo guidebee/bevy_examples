@@ -1,0 +1,10 @@
+[workspace]
+members = ["hello_world"
+
+]
+
+[profile.release]
+opt-level = 3
+
+[workspace.dependencies]
+bevy = "0.15" # make sure this is the latest version
